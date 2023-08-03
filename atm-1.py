@@ -59,12 +59,13 @@ class Atm:
   def withdraw(self):
     user_pin = input('Enter the pin')
     if user_pin == self.pin:
-      # allow to withdraw
+        
+        # allow to withdraw
       amount = int(input('Enter the amount'))
       if amount <= self.__balance:
         self.balance = self.balance - amount
         print('withdrawl successful.balance is',self.balance)
       else:
-        print('abe garib')
+        print('You have insufficient Balance')
     else:
-      print('sale chor')
+      print('You have entered the wrong pin')
