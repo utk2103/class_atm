@@ -1,6 +1,6 @@
 class Atm:
 
-  # constructor(special function)->superpower -> 
+  # constructor(special function)->superpower 
   def __init__(self):
     print(id(self))
     self.pin = ''
@@ -30,37 +30,37 @@ class Atm:
       exit()
 
   def create_pin(self):
-    user_pin = input('enter your pin')
+    user_pin = input('Enter your pin')
     self.pin = user_pin
 
-    user_balance = int(input('enter balance'))
+    user_balance = int(input('Enter balance'))
     self.balance = user_balance
 
-    print('pin created successfully')
+    print('Pin created successfully')
 
   def change_pin(self):
-    old_pin = input('enter old pin')
+    old_pin = input('Enter old pin')
 
     if old_pin == self.pin:
       # let him change the pin
-      new_pin = input('enter new pin')
+      new_pin = input('Enter new pin')
       self.pin = new_pin
-      print('pin change successful')
+      print('Pin change successful')
     else:
-      print('nai karne de sakta re baba')
+      print('You can't change the pin')
 
   def check_balance(self):
-    user_pin = input('enter your pin')
+    user_pin = input('Enter your pin')
     if user_pin == self.pin:
       print('your balance is ',self.__balance)
     else:
-      print('chal nikal yahan se')
+      print('You have entered the wrong pin')
 
   def withdraw(self):
-    user_pin = input('enter the pin')
+    user_pin = input('Enter the pin')
     if user_pin == self.pin:
       # allow to withdraw
-      amount = int(input('enter the amount'))
+      amount = int(input('Enter the amount'))
       if amount <= self.__balance:
         self.balance = self.balance - amount
         print('withdrawl successful.balance is',self.balance)
